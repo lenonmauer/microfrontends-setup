@@ -1,0 +1,11 @@
+{
+  "extends": "@mfe/tsconfig/react.json",
+  "include": ["**/*.ts", "**/*.tsx", "custom.d.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["*"]
+    }
+  }
+}

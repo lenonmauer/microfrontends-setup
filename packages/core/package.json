@@ -1,0 +1,9 @@
+{
+  "name": "@mfe/core",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.ts",
+  "devDependencies": {
+    "@mfe/eslint-config-custom": "*"
+  }
+}
