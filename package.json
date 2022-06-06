@@ -9,12 +9,14 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "start": "turbo run start --parallel"
   },
   "devDependencies": {
     "eslint": "^8.17.0",
     "eslint-config-custom": "latest",
     "prettier": "^2.6.2",
+    "serve": "^13.0.2",
     "turbo": "^1.2.16"
   },
   "engines": {
