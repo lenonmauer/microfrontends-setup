@@ -16,7 +16,7 @@
     },
     "start": {
       "dependsOn": [
-        "^build"
+        "build"
       ]
     },
   }
