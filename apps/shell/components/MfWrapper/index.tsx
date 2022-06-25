@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/router'
 
 import { MountProps } from '@mfe/core'
 
@@ -11,20 +11,18 @@ type MfWrapperProps = {
 export function MfWrapper({ mount, unmount }: MfWrapperProps) {
   const elementRef = useRef<HTMLDivElement>(null)
   const mountedRef = useRef(false)
-  const location = useLocation()
-  const navigate = useNavigate()
+  const router = useRouter()
 
   useEffect(() => {
     if (mountedRef.current) return
-
     const remoteProps: MountProps = {
       initialPath: location.pathname,
       isShellRender: true,
     }
-
+    console.log('Mounted')
     mount(elementRef.current!, remoteProps)
     mountedRef.current = true
-  }, [location.pathname, mount, navigate])
+  }, [router.pathname, mount])
 
   useEffect(() => {
     return () => {
